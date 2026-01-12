@@ -1,0 +1,389 @@
+11:06 AM | __main__ | INFO | Validating group axioms
+11:06 AM | __main__ | INFO | Identity found: 0
+11:06 AM | __main__ | INFO | All inverses found
+11:06 AM | __main__ | SUCCESS | Group validation successful
+11:09 AM | __main__ | INFO | Validating group axioms
+11:09 AM | __main__ | INFO | Identity found: 1
+11:11 AM | __main__ | INFO | Validating group axioms
+11:11 AM | __main__ | INFO | Identity found: 1
+11:11 AM | __main__ | ERROR | Group validation failed
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from '/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelapp.py'>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x7ff0af0d5bc0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x7ff0b11d83d0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelapp.py", line 758, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x7ff0af10c540>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x7ff09da8f390>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x7ff0b11d83d0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/tornado/platform/asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x7ff0b06f2c00>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x7ff09da8f390>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7ff0b06f8a40>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7ff0b08f8900>
+    └ <Handle <TaskStepMethWrapper object at 0x7fef3e32d3f0>()>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7fef3e32d3f0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7fef3e32d3f0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7fef3e32d3f0>()>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 614, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+          │    │              │                └ None
+          │    │              └ [<zmq.Frame(b'99b48d19-1ca'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'c23216858a9c'...64B)>, <zmq.Frame(b'{"date":"202...
+          │    └ <function Kernel.dispatch_shell at 0x7ff0af25ec00>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x7ff0af11a650>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 471, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x7ff0af0d0740>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/ipkernel.py", line 366, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2026, 1, 12, 5, 41, 40, 75000, tzinfo=tzutc()), 'msg_id': 'eff907d5-725f-4073-b0a6-46b8...
+                                  │       └ [b'99b48d19-1cab-437a-a619-c54e5dbb4805']
+                                  └ <zmq.Socket(zmq.PAIR) at 0x7ff09da94050>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 827, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x7fef3ed5fba0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/ipkernel.py", line 458, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x7ff0af2976a0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/home/rudy/code/grokking/notebooks/grokking.ipynb#W...
+                             └ ('n = 5\nZ = Group(elements=np.arange(n), op=lambda x, y: (x * y) % n)',)
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3123, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x7ff0afc5bec0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3178, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x7fef3efeaf60>
+             └ <function _pseudo_sync_runner at 0x7ff0afc3ee80>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x7fef3efeaf60>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3400, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ '/tmp/ipykernel_36345/3015712638.py'
+                       │    │             │        └ [<ast.Assign object at 0x7fef3e20c460>, <ast.Assign object at 0x7fef3e20c700>]
+                       │    │             └ <ast.Module object at 0x7fef3e20c3a0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x7ff0afc5c2c0>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3641, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 7fef3df75010, execution_count=11 error_before_exec=None error_in_exec=None info=<ExecutionInfo obj...
+             │    │        └ <code object <module> at 0x7fef3e43bd30, file "/tmp/ipykernel_36345/3015712638.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x7ff0afc5c360>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3701, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ <property object at 0x7ff0afc54900>
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+         │         │    └ <property object at 0x7ff0afc549a0>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+         └ <code object <module> at 0x7fef3e43bd30, file "/tmp/ipykernel_36345/3015712638.py", line 1>
+
+  File "/tmp/ipykernel_36345/3015712638.py", line 2, in <module>
+    Z = Group(elements=np.arange(n), op=lambda x, y: (x * y) % n)
+        │              │  │      │                             └ 5
+        │              │  │      └ 5
+        │              │  └ <built-in function arange>
+        │              └ <module 'numpy' from '/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/numpy/__init__.py'>
+        └ <class '__main__.Group'>
+
+  File "/tmp/ipykernel_36345/3145546629.py", line 50, in __init__
+    self._validate_group()
+    │    └ <function Group._validate_group at 0x7fef3e40a2a0>
+    └ <__main__.Group object at 0x7fef3df89e10>
+
+> File "/tmp/ipykernel_36345/3145546629.py", line 85, in _validate_group
+    self._find_op_inverses()
+    │    └ <function Group._find_op_inverses at 0x7fef3de18400>
+    └ <__main__.Group object at 0x7fef3df89e10>
+
+  File "/tmp/ipykernel_36345/3145546629.py", line 156, in _find_op_inverses
+    raise ValueError(f"No inverse found for element {a}")
+
+ValueError: No inverse found for element 0
+11:11 AM | __main__ | SUCCESS | Group validation successful
+11:12 AM | __main__ | INFO | Validating group axioms
+11:12 AM | __main__ | INFO | Identity found: 1
+11:12 AM | __main__ | ERROR | Group validation failed
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from '/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelapp.py'>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x7ff0af0d5bc0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x7ff0b11d83d0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelapp.py", line 758, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x7ff0af10c540>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x7ff09da8f390>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x7ff0b11d83d0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/tornado/platform/asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x7ff0b06f2c00>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x7ff09da8f390>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7ff0b06f8a40>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7ff0b08f8900>
+    └ <Handle <TaskStepMethWrapper object at 0x7fef3e3dabf0>()>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7fef3e3dabf0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7fef3e3dabf0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7fef3e3dabf0>()>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 614, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+          │    │              │                └ None
+          │    │              └ [<zmq.Frame(b'99b48d19-1ca'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'b754d5597e76'...64B)>, <zmq.Frame(b'{"date":"202...
+          │    └ <function Kernel.dispatch_shell at 0x7ff0af25ec00>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x7ff0af11a650>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 471, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x7ff0af0d0740>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/ipkernel.py", line 366, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2026, 1, 12, 5, 42, 7, 467000, tzinfo=tzutc()), 'msg_id': '2e36d640-7f16-4176-be71-c33f...
+                                  │       └ [b'99b48d19-1cab-437a-a619-c54e5dbb4805']
+                                  └ <zmq.Socket(zmq.PAIR) at 0x7ff09da94050>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 827, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x7fef3ed5fba0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/ipkernel.py", line 458, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x7ff0af2976a0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/home/rudy/code/grokking/notebooks/grokking.ipynb#W...
+                             └ ('n = 5\nZ = Group(elements=np.arange(n), op=lambda x, y: (x * y) % n)',)
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3123, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x7ff0afc5bec0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3178, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x7fef3efeaf60>
+             └ <function _pseudo_sync_runner at 0x7ff0afc3ee80>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x7fef3efeaf60>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3400, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ '/tmp/ipykernel_36345/3015712638.py'
+                       │    │             │        └ [<ast.Assign object at 0x7fef3e3db9a0>, <ast.Assign object at 0x7fef3e3dad70>]
+                       │    │             └ <ast.Module object at 0x7fef3e3db9d0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x7ff0afc5c2c0>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3641, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 7fef3df57610, execution_count=13 error_before_exec=None error_in_exec=None info=<ExecutionInfo obj...
+             │    │        └ <code object <module> at 0x7fef3de20130, file "/tmp/ipykernel_36345/3015712638.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x7ff0afc5c360>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3701, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ <property object at 0x7ff0afc54900>
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+         │         │    └ <property object at 0x7ff0afc549a0>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+         └ <code object <module> at 0x7fef3de20130, file "/tmp/ipykernel_36345/3015712638.py", line 1>
+
+  File "/tmp/ipykernel_36345/3015712638.py", line 2, in <module>
+    Z = Group(elements=np.arange(n), op=lambda x, y: (x * y) % n)
+        │              │  │      │                             └ 5
+        │              │  │      └ 5
+        │              │  └ <built-in function arange>
+        │              └ <module 'numpy' from '/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/numpy/__init__.py'>
+        └ <class '__main__.Group'>
+
+  File "/tmp/ipykernel_36345/1881959769.py", line 50, in __init__
+    self._validate_group()
+    │    └ <function Group._validate_group at 0x7fef3de191c0>
+    └ <__main__.Group object at 0x7fef3f1107d0>
+
+> File "/tmp/ipykernel_36345/1881959769.py", line 85, in _validate_group
+    self._find_op_inverses()
+    │    └ <function Group._find_op_inverses at 0x7fef3de19440>
+    └ <__main__.Group object at 0x7fef3f1107d0>
+
+  File "/tmp/ipykernel_36345/1881959769.py", line 156, in _find_op_inverses
+    raise ValueError(f"No inverse found for element {a}")
+
+ValueError: No inverse found for element 0
+11:13 AM | __main__ | INFO | Validating group axioms
+11:13 AM | __main__ | INFO | Identity found: 1
+11:13 AM | __main__ | ERROR | Group validation failed
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from '/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelapp.py'>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x7ff0af0d5bc0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x7ff0b11d83d0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelapp.py", line 758, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x7ff0af10c540>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x7ff09da8f390>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x7ff0b11d83d0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/tornado/platform/asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x7ff0b06f2c00>
+    │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x7ff09da8f390>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7ff0b06f8a40>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7ff0b08f8900>
+    └ <Handle <TaskStepMethWrapper object at 0x7fef3e4e2c20>()>
+  File "/home/rudy/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7fef3e4e2c20>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7fef3e4e2c20>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7fef3e4e2c20>()>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 614, in shell_main
+    await self.dispatch_shell(msg, subshell_id=subshell_id)
+          │    │              │                └ None
+          │    │              └ [<zmq.Frame(b'99b48d19-1ca'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'fdc8e345b6ee'...64B)>, <zmq.Frame(b'{"date":"202...
+          │    └ <function Kernel.dispatch_shell at 0x7ff0af25ec00>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x7ff0af11a650>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 471, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x7ff0af0d0740>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/ipkernel.py", line 366, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2026, 1, 12, 5, 43, 10, 988000, tzinfo=tzutc()), 'msg_id': 'd533fbc9-d4c7-4565-8126-b7b...
+                                  │       └ [b'99b48d19-1cab-437a-a619-c54e5dbb4805']
+                                  └ <zmq.Socket(zmq.PAIR) at 0x7ff09da94050>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py", line 827, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x7fef3ed5fba0>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/ipkernel.py", line 458, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x7ff0af2976a0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/ipykernel/zmqshell.py", line 663, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/home/rudy/code/grokking/notebooks/grokking.ipynb#W...
+                             └ ('n = 5\nZ = Group(elements=np.arange(n), op=lambda x, y: (x * y) % n)',)
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3123, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x7ff0afc5bec0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3178, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x7fef3df62f60>
+             └ <function _pseudo_sync_runner at 0x7ff0afc3ee80>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x7fef3df62f60>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3400, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ '/tmp/ipykernel_36345/3015712638.py'
+                       │    │             │        └ [<ast.Assign object at 0x7fef3dedcdc0>, <ast.Assign object at 0x7fef3dedcd60>]
+                       │    │             └ <ast.Module object at 0x7fef3dedc4c0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x7ff0afc5c2c0>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3641, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 7fef3df7f890, execution_count=17 error_before_exec=None error_in_exec=None info=<ExecutionInfo obj...
+             │    │        └ <code object <module> at 0x7fef3de21330, file "/tmp/ipykernel_36345/3015712638.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x7ff0afc5c360>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+  File "/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/IPython/core/interactiveshell.py", line 3701, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ <property object at 0x7ff0afc54900>
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+         │         │    └ <property object at 0x7ff0afc549a0>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x7ff09da58990>
+         └ <code object <module> at 0x7fef3de21330, file "/tmp/ipykernel_36345/3015712638.py", line 1>
+
+  File "/tmp/ipykernel_36345/3015712638.py", line 2, in <module>
+    Z = Group(elements=np.arange(n), op=lambda x, y: (x * y) % n)
+        │              │  │      │                             └ 5
+        │              │  │      └ 5
+        │              │  └ <built-in function arange>
+        │              └ <module 'numpy' from '/home/rudy/code/grokking/.venv/lib/python3.11/site-packages/numpy/__init__.py'>
+        └ <class '__main__.Group'>
+
+  File "/tmp/ipykernel_36345/1881959769.py", line 50, in __init__
+    self._validate_group()
+    │    └ <function Group._validate_group at 0x7fef3de1a3e0>
+    └ <__main__.Group object at 0x7fef3edc6610>
+
+> File "/tmp/ipykernel_36345/1881959769.py", line 85, in _validate_group
+    self._find_op_inverses()
+    │    └ <function Group._find_op_inverses at 0x7fef3de19940>
+    └ <__main__.Group object at 0x7fef3edc6610>
+
+  File "/tmp/ipykernel_36345/1881959769.py", line 156, in _find_op_inverses
+    raise ValueError(f"No inverse found for element {a}")
+
+ValueError: No inverse found for element 0
+11:15 AM | __main__ | INFO | Validating group axioms
+11:15 AM | __main__ | INFO | Identity found: 1
+11:15 AM | __main__ | ERROR | Group valildation failed with exception No inverse found for element 0
+11:15 AM | __main__ | INFO | Validating group axioms
+11:15 AM | __main__ | INFO | Identity found: 1
+11:15 AM | __main__ | ERROR | Group valildation failed due to the following reason: No inverse found for element 0
+11:15 AM | __main__ | INFO | Validating group axioms
+11:15 AM | __main__ | ERROR | Group valildation failed due to the following reason: Closure violated: 1 * 5 = 0 not in elements
+11:16 AM | __main__ | INFO | Validating group axioms
+11:16 AM | __main__ | INFO | Identity found: 1
+11:16 AM | __main__ | INFO | All inverses found
+11:16 AM | __main__ | SUCCESS | Group validation successful
+11:18 AM | __main__ | INFO | Validating group axioms
+11:18 AM | __main__ | INFO | Identity found: 0
+11:18 AM | __main__ | INFO | All inverses found
+11:18 AM | __main__ | SUCCESS | Group validation successful
