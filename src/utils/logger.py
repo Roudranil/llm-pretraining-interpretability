@@ -45,18 +45,18 @@ def create_logger(
 
     fmt = format or (
         "<white><dim>{time:%I:%M %p}</dim></white> | "
-        "<white><dim>{name}</dim></white> | "
-        "<level>{level}</level> | {message}"
+        "<white><dim>{name:<8}</dim></white> | "
+        "<level>{level:<9}</level> | <level>{message}</level>"
     )
 
     styles = {
         "TRACE": "<white><dim>",
-        "DEBUG": "<white>",
-        "INFO": "<blue>",
+        "DEBUG": "<white><normal>",
+        "INFO": "<blue><normal>",
         "SUCCESS": "<green><bold>",
-        "WARNING": "<yellow>",
+        "WARNING": "<yellow><normal>",
         "ERROR": "<red><bold>",
-        "CRITICAL": "<red><bold><underline>",
+        "CRITICAL": "<bg red><fg black><bold>",
     }
     for lvl, style in styles.items():
         logger.level(lvl, color=style)
